@@ -75,9 +75,9 @@ We prefer the reference with a length that is closest to the candidate's.
 
 Checkout function `get_eff_ref_length` in utils.py.
 
-$c$: the total lengths of all candidates
+`c`: the total lengths of all candidates
 
-$r$: the total lengths of all effective reference lengths
+`r`: the total lengths of all effective reference lengths
 
 <!-- $$
 
@@ -104,7 +104,6 @@ $$ -->
 
 <img src='https://latex.codecogs.com/gif.latex?%5Chuge%20%5Ctext%7BBLEU%7D%20%3D%20%5Ctext%7BBP%7D%20%5Ctimes%20%5Ctext%7Bexp%7D%20%5Cbegin%7BBmatrix%7D%20%5Csum_%7Bn%3D1%7D%5E%7BN%7Dw_n%5Clog%7Bp_n%7D%20%5Cend%7BBmatrix%7D' width=500>
 
-N: the number of grams
+`N`: the number of grams
 
-
-w: list of pre-set weight for each gram
+`w`: list of pre-set weight for each gram

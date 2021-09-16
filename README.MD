@@ -28,9 +28,11 @@ print('Bleu Score: {}'.format(bleu_score))
 II. BLEU Score Formula
 
 ### 1. Precision
-$$
+<!-- $$
     p_n = \frac{\sum_{C \ \in \ \left \{ Candidates \right \}} \sum_{n-gram \ \in \ C} Count_{clip}(n-gram) }{\sum_{C' \ \in \ \left \{ Candidates \right \}} \sum_{n-gram' \ \in \ C'} Count(n-gram')} 
-$$
+$$ -->
+
+![Precision](https://latex.codecogs.com/gif.latex?p_n%20%3D%20%5Cfrac%7B%5Csum_%7BC%20%5C%20%5Cin%20%5C%20%5C%7B%20Candidates%20%5C%7D%7D%20%5Csum_%7Bn-gram%20%5C%20%5Cin%20%5C%20C%7D%20Count_%7Bclip%7D%28n-gram%29%20%7D%7B%5Csum_%7BC%27%20%5C%20%5Cin%20%5C%20%5C%7B%20Candidates%20%5C%7D%7D%20%5Csum_%7Bn-gram%27%20%5C%20%5Cin%20%5C%20C%27%7D%20Count%28n-gram%27%29%7D)
 
 We count specific n-grams in the candidates and the number of those grams in the references. Then we calculate the proportion of two countings and get the precision.
 
@@ -74,27 +76,32 @@ $c$: the total lengths of all candidates
 
 $r$: the total lengths of all effective reference lengths
 
-$$
+<!-- $$
 
 \text{BP} = \left\{\begin{matrix} 1 \ \ \ \text{if}  \ \ \ c > r
 \\ e^{1-\frac{r}{c}}
 
 \end{matrix}\right.
 
-$$
+$$ -->
+
+<img src='https://latex.codecogs.com/gif.latex?%5Ctext%7BBP%7D%20%3D%20%5Cleft%5C%7B%5Cbegin%7Bmatrix%7D%201%20%5C%20%5C%20%5C%20%5Ctext%7Bif%7D%20%5C%20%5C%20%5C%20c%20%3E%20r%20%5C%5C%20e%5E%7B1-%5Cfrac%7Br%7D%7Bc%7D%7D%20%5Cend%7Bmatrix%7D%5Cright.' />
 
 
 ### 3. Sentence brevity penalty
 
 
-$$
+<!-- $$
 \text{BLEU} = \text{BP} * \text{exp} \begin{Bmatrix}
 \sum_{n=1}^{N}w_n\log{p_n}
 \end{Bmatrix}
 
-$$
-
-$N$: the number of grams
+$$ -->
 
 
-$w$: list of pre-set weight for each gram
+![](https://latex.codecogs.com/gif.latex?%5Ctext%7BBLEU%7D%20%3D%20%5Ctext%7BBP%7D%20*%20%5Ctext%7Bexp%7D%20%5Cbegin%7BBmatrix%7D%20%5Csum_%7Bn%3D1%7D%5E%7BN%7Dw_n%5Clog%7Bp_n%7D%20%5Cend%7BBmatrix%7D)
+
+N: the number of grams
+
+
+w: list of pre-set weight for each gram

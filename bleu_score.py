@@ -4,6 +4,7 @@ import math
 
 def cal_corpus_bleu_score(candidates, references_list, N, weights=None):
     assert N > 0, 'N must be greater than 0'
+    assert N == len(weights), 'weights length must equal N'
 
     if not weights:
         weights = [1 / N for _ in range(N)]
@@ -34,7 +35,7 @@ def cal_corpus_bleu_score(candidates, references_list, N, weights=None):
             # Calculate precision on each group
             numerator, denominator = cal_precision(
                 candidate, references, n_grams)
-
+                
             ps_numerators[i] += numerator
             ps_denominators[i] += denominator
 

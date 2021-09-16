@@ -91,7 +91,7 @@ $$ -->
 <img src='https://latex.codecogs.com/gif.latex?%5Chuge%20%5Ctext%7BBP%7D%20%3D%20%5Cleft%5C%7B%5Cbegin%7Bmatrix%7D%201%20%5C%20%5C%20%5C%20%5Ctext%7Bif%7D%20%5C%20%5C%20%5C%20c%20%3E%20r%20%5C%5C%20e%5E%7B1-%5Cfrac%7Br%7D%7Bc%7D%7D%20%5C%20%5C%20%5C%20%5Ctext%7Bif%7D%5C%20%5C%20%5C%20c%20%5Cleq%20r%20%5Cend%7Bmatrix%7D%5Cright.' width=200 />
 
 
-### 3. Sentence brevity penalty
+### 3. BLEU Formula
 
 
 <!-- $$
